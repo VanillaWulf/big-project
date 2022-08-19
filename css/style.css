@@ -1,0 +1,31 @@
+body {
+    background: #FFFFFF;
+}
+
+.header {
+    background-image: url("../img/bkg-header.jpg");
+}
+
+.header-menu-button {
+    height: 50px;
+    width: 50px;
+    background: #F7654A;
+    border: none;
+    padding: 0;
+}
+
+.header-menu-button:hover {
+    background: #F70A27;
+}
+
+.header-menu-button svg {
+    fill: white;
+    width: 21px;
+    height: 18px;
+}
+
+.header-menu-button:hover svg {
+    fill: gray;
+}
+
+

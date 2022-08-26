@@ -1,12 +1,14 @@
 body {
     background: #FFFFFF;
+    font-family: 'Oswald', sans-serif;
+    font-style: normal;
 }
 
 .header {
     background-image: url("../img/bkg-header.jpg");
 }
 
-.header-menu-button {
+.header__menu-button {
     height: 50px;
     width: 50px;
     background: #F7654A;
@@ -14,18 +16,44 @@ body {
     padding: 0;
 }
 
-.header-menu-button:hover {
+.header__menu-button:hover {
     background: #F70A27;
 }
 
-.header-menu-button svg {
+.header__menu-button svg {
     fill: white;
     width: 21px;
     height: 18px;
 }
 
-.header-menu-button:hover svg {
+.header__menu-button:hover svg {
     fill: gray;
+}
+
+.header__title {
+    text-transform: uppercase;
+    font-size: 64px;
+    font-weight: 500;
+    line-height: 95px;
+    letter-spacing: 0.02em;
+    text-align: center;
+    color: #FFFFFF;
+    /*margin-bottom: 35px;*/
+    margin: 0 0 35px;
+}
+
+.header__text {
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 27px;
+    text-align: center;
+    text-transform: uppercase;
+    color: #FFFFFF;
+}
+
+.container {
+    max-width: 1110px;
+    margin: 0 auto;
 }
 
 

@@ -4,8 +4,20 @@ body {
     font-style: normal;
 }
 
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    overflow: hidden;
+    border: 0;
+    clip: rect(0 0 0 0);
+}
+
 .header {
     background-image: url("../img/bkg-header.jpg");
+    padding: 0 0 320px;
 }
 
 .header__menu-button {
@@ -42,6 +54,11 @@ body {
     margin: 0 0 35px;
 }
 
+.list-navigation {
+    padding: 20px;
+    background-color: #FFFFFF;
+}
+
 .header__text {
     font-size: 18px;
     font-weight: 400;
@@ -55,14 +72,14 @@ body {
     display: flex;
     justify-content: space-between;
     position: relative;
+    padding: 20px 0;
 }
 
 .header__navigation-page {
     display: none;
     position: absolute;
-    background: #FFFFFF;
     right: 0;
-    bottom: -30px;
+    bottom: -50px;
 }
 
 .header__menu-button:hover + .header__navigation-page {
@@ -76,6 +93,22 @@ body {
 .container {
     max-width: 1110px;
     margin: 0 auto;
+}
+
+.age__list {
+    display: flex;
+    background-color: #F7F7F7;
+    padding: 57px 130px;
+    justify-content: space-between;
+}
+
+.age__item {
+    width: 190px;
+    text-align: center;
+}
+
+.age {
+    margin: -80px 0 0 0;
 }
 
 

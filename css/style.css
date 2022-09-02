@@ -51,6 +51,28 @@ body {
     color: #FFFFFF;
 }
 
+.header__navigation {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+}
+
+.header__navigation-page {
+    display: none;
+    position: absolute;
+    background: #FFFFFF;
+    right: 0;
+    bottom: -30px;
+}
+
+.header__menu-button:hover + .header__navigation-page {
+    display: block;
+}
+
+.header__navigation-page:hover {
+    display: block;
+}
+
 .container {
     max-width: 1110px;
     margin: 0 auto;

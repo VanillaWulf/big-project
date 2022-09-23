@@ -1,3 +1,5 @@
+/*для декстопа */
+
 body {
     background: #FFFFFF;
     font-family: 'Oswald', sans-serif;
@@ -18,6 +20,7 @@ body {
 .header {
     background-image: url("../img/bkg-header.jpg");
     padding: 0 0 320px;
+    background-size: cover;
 }
 
 .header__menu-button {
@@ -26,6 +29,7 @@ body {
     background: #F7654A;
     border: none;
     padding: 0;
+    display: none;
 }
 
 .header__menu-button:hover {
@@ -55,8 +59,22 @@ body {
 }
 
 .list-navigation {
+    display: flex;
+}
+
+.list-navigation__item {
+    margin-left: 20px;
+}
+
+.list-navigation__item a {
+    color: #FFFFFF;
     padding: 20px;
-    background-color: #FFFFFF;
+    display: block;
+    text-decoration: none;
+}
+
+.list-navigation__item a:hover {
+    text-decoration: underline;
 }
 
 .header__text {
@@ -76,20 +94,6 @@ body {
     margin: 0 0 112px;
 }
 
-.header__navigation-page {
-    display: none;
-    position: absolute;
-    right: 0;
-    bottom: -50px;
-}
-
-.header__menu-button:hover + .header__navigation-page {
-    display: block;
-}
-
-.header__navigation-page:hover {
-    display: block;
-}
 
 .container {
     max-width: 1110px;
@@ -169,13 +173,14 @@ body {
 }
 
 .projects__list {
-    display: flex;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-column-gap: 30px;
 }
 
-.projects__item {
-    width: 350px;
-}
+/*.projects__item {*/
+/*    width: 350px;*/
+/*}*/
 
 .projects__image {
     margin: 0 0 65px;
@@ -216,4 +221,88 @@ body {
     top: -80px;
     left: 50%;
     transform: translateX(-50%);
+}
+
+/*для планшета */
+@media (max-width: 1200px) {
+    .container {
+        width: 90%;
+    }
+
+    .header {
+        padding: 0 0 150px;
+    }
+
+    .header__title,
+    .about__number {
+        font-size: 40px;
+        line-height: 50px;
+    }
+
+    .header__text,
+    .about__age {
+        font-size: 13px;
+        line-height: 20px;
+    }
+
+    .about__text {
+        font-size: 13px;
+        line-height: 15px;
+    }
+
+    .age__list {
+        padding: 30px 50px;
+    }
+
+    .projects__list {
+        grid-template-columns: repeat(2, 1fr);
+        grid-row-gap: 30px;
+    }
+
+    .projects__image {
+        width: 100%;
+        display: block;
+        height: 380px;
+        object-fit: cover;
+    }
+}
+
+@media (max-width: 650px) {
+    .projects__image {
+        height: 250px;
+        margin-bottom: 25px;
+    }
+}
+
+/*для мобилки */
+@media (max-width: 500px) {
+
+    .header__menu-button {
+        display: block;
+    }
+
+    .header__navigation-page {
+        display: none;
+        position: absolute;
+        right: 0;
+        bottom: -130px;
+    }
+
+    .header__menu-button:hover + .header__navigation-page {
+        display: block;
+    }
+
+    .header__navigation-page:hover {
+        display: block;
+    }
+
+    .list-navigation {
+        background-color: white;
+    }
+
+    .list-navigation__item a {
+        color: gray;
+    }
+
+
 }
